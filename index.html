@@ -1,124 +1,172 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Launching Soon</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nonexistentuserr</title>
 
-        body {
-            font-family: 'Arial Black', 'Impact', sans-serif;
-            background-image: url('faf843aa3f8879b17e1f2453ab52dae1.jpg');
-            background-size: cover;
-            background-position: center;
-            color: #e0e0e0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-            position: relative;
-        }
+  <!-- Подключение стильного шрифта -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
 
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 0;
-        }
+  <style>
+    /* 1. Настройки тёплого тёмного фона и всей страницы */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        .container {
-            max-width: 900px;
-            width: 100%;
-            position: relative;
-            z-index: 1;
-        }
+    body {
+      background-color: #121110; /* Мягкий тёмный тёплый фон */
+      color: #E8E3DD; /* Мягкий кремовый цвет текста */
+      font-family: 'Space Grotesk', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
 
-        .main-title {
-            font-size: clamp(3rem, 15vw, 8rem);
-            font-weight: 900;
-            letter-spacing: 0.15em;
-            color: #f0f0f0;
-            text-transform: uppercase;
-            line-height: 1.1;
-            margin-bottom: 20px;
-            text-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
-        }
+    /* 2. Верхний блок с вашим текстом */
+    .hero {
+      text-align: center;
+      margin-bottom: 40px;
+    }
 
-        .sub-title {
-            font-family: 'Courier New', monospace;
-            font-size: clamp(0.7rem, 1.8vw, 1.1rem);
-            letter-spacing: 0.5em;
-            color: #b0b0b0;
-            text-transform: uppercase;
-            margin-bottom: 50px;
-            text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-        }
+    .hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
 
-        .numbers {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            font-size: clamp(2rem, 8vw, 5rem);
-            font-weight: 900;
-            color: #ffffff;
-            letter-spacing: 0.1em;
-        }
+    .hero p {
+      font-size: 1rem;
+      letter-spacing: 3px;
+      color: #A39E98; /* Чуть менее яркий текст для девиза */
+      text-transform: uppercase;
+    }
 
-        .numbers span {
-            background: rgba(20, 20, 20, 0.6);
-            padding: 10px 30px;
-            border-radius: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(4px);
-        }
+    /* 3. Карточка с формой обратной связи */
+    .contact-card {
+      background: #1C1A18; /* Тёплый подтон карточки */
+      border: 1px solid rgba(232, 227, 221, 0.12);
+      border-radius: 16px;
+      padding: 36px;
+      max-width: 400px;
+      width: 100%;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
 
-        .footer {
-            position: absolute;
-            bottom: 30px;
-            left: 0;
-            width: 100%;
-            text-align: center;
-            font-family: 'Courier New', monospace;
-            font-size: 0.8rem;
-            color: rgba(255, 255, 255, 0.4);
-            letter-spacing: 0.2em;
-            z-index: 1;
-        }
+    .contact-card h2 {
+      font-size: 1.25rem;
+      letter-spacing: 1.5px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      text-align: center;
+    }
 
-        @media (max-width: 600px) {
-            .numbers {
-                gap: 20px;
-                flex-wrap: wrap;
-            }
-            .numbers span {
-                padding: 5px 20px;
-            }
-        }
-    </style>
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #A39E98;
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 14px;
+      background: #121110;
+      border: 1px solid rgba(232, 227, 221, 0.15);
+      border-radius: 8px;
+      color: #E8E3DD;
+      font-family: inherit;
+      font-size: 0.9rem;
+      outline: none;
+      transition: border-color 0.2s ease;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: #E8E3DD;
+    }
+
+    /* Кнопка отправки */
+    .submit-btn {
+      width: 100%;
+      padding: 14px;
+      background: #E8E3DD;
+      color: #121110;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      margin-top: 8px;
+      transition: opacity 0.2s ease;
+    }
+
+    .submit-btn:hover {
+      opacity: 0.88;
+    }
+
+    /* Нижняя плашка */
+    .footer-tag {
+      margin-top: 40px;
+      font-size: 0.85rem;
+      color: #A39E98;
+      letter-spacing: 1px;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1 class="main-title">LAUNCHING<br>SOON</h1>
-        <p class="sub-title">SIC ITUR AD ASTRA</p>
-        <div class="numbers">
-            <span>449</span>
-            <span>01</span>
-        </div>
-    </div>
+  <!-- Ваша главная надпись -->
+  <div class="hero">
+    <h1>LAUNCHING<br>SOON</h1>
+    <p>SIC ITUR AD ASTRA</p>
+  </div>
 
-    <div class="footer">nonexistentuserr</div>
+  <!-- Карточка анкеты/формы -->
+  <div class="contact-card">
+    <h2>GET IN TOUCH</h2>
+
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <div class="form-group">
+        <label for="name">Имя</label>
+        <input type="text" id="name" name="name" placeholder="Введите имя" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="name@example.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Сообщение</label>
+        <textarea id="message" name="message" rows="3" placeholder="Ваше сообщение..."></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">ОТПРАВИТЬ</button>
+    </form>
+  </div>
+
+  <!-- Подпись с никнеймом -->
+  <div class="footer-tag">
+    nonexistentuserr
+  </div>
 
 </body>
 </html>
