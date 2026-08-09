@@ -1,11 +1,125 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>User Not Found</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Launching Soon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial Black', 'Impact', sans-serif;
+            background-image: url('bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #e0e0e0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        /* Полупрозрачная тёмная подложка, чтобы текст читался */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+        }
+
+        .main-title {
+            font-size: clamp(3rem, 15vw, 8rem);
+            font-weight: 900;
+            letter-spacing: 0.15em;
+            color: #f0f0f0;
+            text-transform: uppercase;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            text-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+        }
+
+        .sub-title {
+            font-family: 'Courier New', monospace;
+            font-size: clamp(0.8rem, 2vw, 1.2rem);
+            letter-spacing: 0.4em;
+            color: #d0d0d0;
+            text-transform: uppercase;
+            margin-bottom: 60px;
+            text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+        }
+
+        .numbers {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            font-size: clamp(2rem, 8vw, 5rem);
+            font-weight: 900;
+            color: #ffffff;
+            letter-spacing: 0.1em;
+        }
+
+        .numbers span {
+            background: rgba(20, 20, 20, 0.6);
+            padding: 10px 30px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(4px);
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 30px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            font-family: 'Courier New', monospace;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.4);
+            letter-spacing: 0.2em;
+            z-index: 1;
+        }
+
+        @media (max-width: 600px) {
+            .numbers {
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+            .numbers span {
+                padding: 5px 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>404 — User Not Found</h1>
-    <p>The user nonexistentuserr does not exist</p>
+
+    <div class="container">
+        <h1 class="main-title">LAUNCHING<br>SOON</h1>
+        <p class="sub-title">An Ex Nihilo Template</p>
+        <div class="numbers">
+            <span>449</span>
+            <span>01</span>
+        </div>
+    </div>
+
+    <div class="footer">nonexistentuserr</div>
+
 </body>
 </html>
